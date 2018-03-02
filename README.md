@@ -1,0 +1,2 @@
+# LinkedViewPager2
+通过addOnPageChangeListener实现Viewpager联动功能
