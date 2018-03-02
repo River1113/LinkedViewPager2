@@ -27,12 +27,10 @@ import com.android.linkedviewpager2.fragment.Fragment4;
 public class MainActivity extends FragmentActivity {
 
     private LinearLayout container;
-    private ViewPager bottomPager;
-
     private ViewPager topPager;
     private List<TopPagerBean> topPagerList;
 
-    private ImageView[] images;
+    private ViewPager bottomPager;
     private List<Fragment> fragments;
 
     @Override
@@ -82,7 +80,6 @@ public class MainActivity extends FragmentActivity {
                 //arg0当前滑动界面
                 //arg1当页面前滑动百分比
                 //arg2当前页面滑动像素
-
                 //Log.v("onPageScrolled", "arg0"+arg0+"arg1"+arg1+"arg2-"+arg2);
                 int width = topPager.getWidth();
 
@@ -132,8 +129,8 @@ public class MainActivity extends FragmentActivity {
         container = this.findViewById(R.id.container);
 
         // 1.设置幕后item的缓存数目
-        bottomPager.setOffscreenPageLimit(3);
         topPager.setOffscreenPageLimit(3);
+//        bottomPager.setOffscreenPageLimit(3);
 
         container.setOnTouchListener(new View.OnTouchListener() {
             @Override
